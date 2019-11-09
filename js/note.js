@@ -17,8 +17,38 @@ for (let i = 0; i < removeNote.length; i++) {
 	}, false);
 };
 
+let noteColor = document.getElementsByClassName('fa-circle');
+for (let i = 0; i < noteColor.length; i++) { 
+	noteColor[i].addEventListener('click', function (e) {
+		switch (noteColor[i].className) {
+			case 'fas fa-circle color0':
+				noteColor[i].parentNode.parentNode.classList.toggle('note-color-0');
+				break;
+			case 'fas fa-circle color1':
+				noteColor[i].parentNode.parentNode.classList.toggle('note-color-1');
+				break;
+			case 'fas fa-circle color2':
+				noteColor[i].parentNode.parentNode.classList.toggle('note-color-2');
+				break;
+			case 'fas fa-circle color3':
+				noteColor[i].parentNode.parentNode.classList.toggle('note-color-3');
+				break;
+			case 'fas fa-circle color4':
+				noteColor[i].parentNode.parentNode.classList.toggle('note-color-4');
+				break;
+			default:
+				noteColor[i].parentNode.parentNode.classList.toggle('note-color-0');
+				break;
+	 	};
+})};
+
+
 // document.querySelectorAll('.fa-circle').forEach(noteColor => { noteColor.addEventListener('click', function (e) {
-//  		this.parentNode.parentNode.classList.toggle('note-color');
+// 		this.parentNode.parentNode.classList.toggle('note-color-0');
+// 		this.parentNode.parentNode.classList.toggle('note-color-1');
+// 		this.parentNode.parentNode.classList.toggle('note-color-2');
+// 		this.parentNode.parentNode.classList.toggle('note-color-3');
+// 		this.parentNode.parentNode.classList.toggle('note-color-4');
 //  	});
 // });
 
@@ -56,3 +86,30 @@ for (let i = 0; i < removeNote.length; i++) {
 
 // let noteColor = document.getElementsByClassName('color'+i);
 	// console.log(noteColor);
+
+// document.querySelectorAll('.fa-circle').forEach(noteColor => { noteColor.addEventListener('click', function (e) {
+// 	if (this.className === 'color-0') {
+// 		this.parentNode.parentNode.classList.toggle('note-color-0');
+// 	} else if (this.className === 'color-1') {
+// 		this.parentNode.parentNode.classList.toggle('note-color-1');
+// 	} else if (this.className === 'color-2') {
+// 		this.parentNode.parentNode.classList.toggle('note-color-2');
+// 	} else if (this.className === 'color-3') {
+// 		this.parentNode.parentNode.classList.toggle('note-color-3');
+// 	} else if (this.className === 'color-4') {
+// 		this.parentNode.parentNode.classList.toggle('note-color-4');
+//  	};
+// })});
+
+
+// if (noteColor[i].className === 'fas fa-circle color0') {
+// 			noteColor[i].parentNode.parentNode.classList.toggle('note-color-0');
+// 		} else if (noteColor[i].className === 'fas fa-circle color1') {
+// 			noteColor[i].parentNode.parentNode.classList.toggle('note-color-1');
+// 		} else if (noteColor[i].className === 'fas fa-circle color2') {
+// 			noteColor[i].parentNode.parentNode.classList.toggle('note-color-2');
+// 		} else if (noteColor[i].className === 'fas fa-circle color3') {
+// 			noteColor[i].parentNode.parentNode.classList.toggle('note-color-3');
+// 		} else if (noteColor[i].className === 'fas fa-circle color4') {
+// 			noteColor[i].parentNode.parentNode.classList.toggle('note-color-4');
+// 	 	};
